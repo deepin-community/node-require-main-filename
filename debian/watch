@@ -1,0 +1,5 @@
+version=3
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-require-main-filename-$1.tar.gz/ \
+ https://github.com/yargs/require-main-filename/tags .*/archive/v?([\d\.]+).tar.gz

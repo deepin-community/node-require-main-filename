@@ -1,0 +1,15 @@
+Description: fix test for autopkgtest
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-05-29
+
+--- a/test.js
++++ b/test.js
+@@ -31,6 +31,6 @@
+   })
+ 
+   it('should default to process.cwd() if require.main is undefined', function () {
+-    requireMainFilename({}).should.match(/require-main-filename/)
++    requireMainFilename({}).should.match(/(?:.*autopkgtest.*|require-main-filename)/)
+   })
+ })
